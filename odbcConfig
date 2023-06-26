@@ -1,0 +1,7 @@
+steps to follow to install odbc driver 
+
+https://help.fsight.ru/en/mergedProjects/Setup/uiwebsetup/03_setup_web/ubuntu/preparing_to_use_odbc_driver_for_mysql.htm
+
+command to run 
+
+./odbc2parquet query --connection-string="Driver={MySQL ODBC 5.3 Unicode Driver};initstmt={set charset utf8mb4;};charset=utf8mb4;Server=localhost;Port=13306;UID=root;PWD=pras29gb;NO_CACHE=1;FORWARD_CURSOR=1;"  output.par "select * from nsedata.city_master"
