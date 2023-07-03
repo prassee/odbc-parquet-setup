@@ -4,4 +4,18 @@ https://help.fsight.ru/en/mergedProjects/Setup/uiwebsetup/03_setup_web/ubuntu/pr
 
 command to run 
 
+sudo apt-get install mysql-client unixodbc odbcinst
+
+cd mysql-connector-odbc-5.3.13-linux-ubuntu18.04-x86-64bit
+
+cp bin/* /usr/local/bin
+cp lib/* /usr/local/lib
+
+myodbc-installer -a -d -n  "MySQL ODBC 5.3 Unicode Driver" -t "Driver=/usr/local/lib/libmyodbc5w.so"
+myodbc-installer -a -d -n  "MySQL ODBC 5.3 ANSI Driver" -t "Driver=/usr/local/lib/libmyodbc5a.so"
+
+
+
 ./odbc2parquet query --connection-string="Driver={MySQL ODBC 5.3 Unicode Driver};initstmt={set charset utf8mb4;};charset=utf8mb4;Server=localhost;Port=13306;UID=root;PWD=pras29gb;NO_CACHE=1;FORWARD_CURSOR=1;"  output.par "select * from nsedata.city_master"
+./odbc2parquet query --connection-string="Driver={MySQL ODBC 5.3 Unicode Driver};initstmt={set charset utf8mb4;};charset=utf8mb4;Server=federateddb-new.lendingkart.com;Port=3306;UID=dwh_slave;PWD=lkdDsdsd453bz321$;NO_CACHE=1;FORWARD_CURSOR=1;"  nsedata.city_master.par "select * from nsedata.city_master"
+./odbc2parquet query --connection-string="Driver={MySQL ODBC 5.3 Unicode Driver};initstmt={set charset utf8mb4;};charset=utf8mb4;Server=federateddb-new.lendingkart.com;Port=3306;UID=dwh_slave;PWD=lkdDsdsd453bz321$;NO_CACHE=1;FORWARD_CURSOR=1;"  lk_master.LK_CLS_LOAN_DISBURSEMENT_MASTER.parquet "select * from lk_master.LK_CLS_LOAN_DISBURSEMENT_MASTER"

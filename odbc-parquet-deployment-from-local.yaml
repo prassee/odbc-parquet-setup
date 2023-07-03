@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dataengg-datalake-odbcparquet
+  namespace: dataengg
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dataengg-datalake-odbcparquet-service
+  template:
+    metadata:
+      labels:
+        app: dataengg-datalake-odbcparquet-service
+    spec:
+      containers:
+        - name: datalake-odbcparquet
+          image: ubuntu:22.04
+          command: ["tail", "-f", "/dev/null"]
+      
