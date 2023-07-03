@@ -12,7 +12,7 @@ RUN wget https://downloads.mysql.com/archives/get/p/10/file/mysql-connector-odbc
 
 RUN tar -xvf mysql-connector-odbc-5.3.13-linux-glibc2.12-x86-64bit.tar.gz
 
-cd mysql-connector-odbc-5.3.13-linux-ubuntu18.04-x86-64bit
+cd mysql-connector-odbc-5.3.13-linux-glibc2.12-x86-64bit.tar.gz
 
 cp bin/* /usr/local/bin
 cp lib/* /usr/local/lib
