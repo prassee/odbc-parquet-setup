@@ -4,7 +4,7 @@ apt update
 
 apt -y upgrade
 
-apt -y install mysql-client unixodbc odbcinst wget  
+apt -y install mysql-client unixodbc odbcinst wget python3 python3-pip
 
 wget https://downloads.mysql.com/archives/get/p/10/file/mysql-connector-odbc-5.3.13-linux-glibc2.12-x86-64bit.tar.gz
 
