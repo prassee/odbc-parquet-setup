@@ -23,5 +23,3 @@ cp mysql-connector-odbc-5.3.13-linux-glibc2.12-x86-64bit/lib/* /usr/local/lib
 
 myodbc-installer -a -d -n  "MySQL ODBC 5.3 Unicode Driver" -t "Driver=/usr/local/lib/libmyodbc5w.so"
 myodbc-installer -a -d -n  "MySQL ODBC 5.3 ANSI Driver" -t "Driver=/usr/local/lib/libmyodbc5a.so"
-
-cp odbc2parquet /usr/local/bin
