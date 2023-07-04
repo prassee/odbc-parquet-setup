@@ -14,7 +14,7 @@ gunzip odbc2parquet-x86_64-ubuntu.gz
 
 chmod a+x odbc2parquet-x86_64-ubuntu
 
-mv odbc2parquet-x86_64-ubuntu odbc2parquet
+mv odbc2parquet-x86_64-ubuntu /usr/local/bin/odbc2parquet
 
 tar -xvf mysql-connector-odbc-5.3.13-linux-glibc2.12-x86-64bit.tar.gz
 
